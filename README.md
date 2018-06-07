@@ -8,11 +8,13 @@ This repository contains **Dockerfiles** of [Azkaban](http://azkaban.github.io/)
 
 ### Build image & Start container
 
-```docker image build -t azkaban-solo-server:1.0 .
+```bash
+docker image build -t azkaban-solo-server:1.0 .
 docker run -it -p 8081:8081 --name some-azkaban -d azkaban-solo-server:1.0
 ```
 
 Start & Stop Azkaban Solo Server
-```docker exec some-azkaban bin/start-solo.sh
+```bash
+docker exec some-azkaban bin/start-solo.sh
 docker exec some-azkaban bin/shutdown-solo.sh
 ```
